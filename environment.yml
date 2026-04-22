@@ -1,0 +1,19 @@
+﻿name: hierhgt-dti
+channels:
+  - pytorch
+  - dglteam
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch>=1.13
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.8
+  - dgl
+  - numpy pandas scikit-learn scipy rdkit tqdm pyyaml
+  - pip
+  - pip:
+      - dgllife
+      - fair-esm
+      - prettytable

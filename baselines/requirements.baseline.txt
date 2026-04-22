@@ -1,0 +1,43 @@
+﻿# Unified baseline environment for HierHGT-DTI baselines/
+# Target: Python 3.9, CUDA 12.1 wheels, NumPy < 2 for RDKit compatibility.
+
+--index-url https://pypi.tuna.tsinghua.edu.cn/simple
+--extra-index-url https://download.pytorch.org/whl/cu121
+-f https://data.dgl.ai/wheels/cu121/repo.html
+-f https://data.pyg.org/whl/torch-2.1.0+cu121.html
+
+numpy<2
+pandas
+scikit-learn
+scipy
+gensim>=4.3.3
+networkx
+pyyaml
+tqdm
+prettytable
+yacs
+biopython
+joblib
+subword-nmt
+prefetch_generator
+sentencepiece
+
+torch==2.1.0+cu121
+torchvision==0.16.0+cu121
+torchaudio==2.1.0+cu121
+torchdata==0.7.0
+
+# Linux cu121 wheels are available up to DGL 2.1.0 in the official repo.
+dgl==2.1.0+cu121
+dgllife==0.3.2
+
+torch-geometric==2.5.3
+pyg-lib
+torch-scatter
+torch-sparse
+torch-cluster
+
+transformers==4.50.1
+fair-esm==2.0.0
+pydantic==2.12.5
+rdkit==2024.9.5
