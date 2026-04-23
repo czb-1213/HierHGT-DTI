@@ -32,6 +32,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger('HierHGTDTITrainer')
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+DATA_DIR = os.path.join(REPO_ROOT, 'data')
+DEFAULT_OUTPUT_ROOT = os.path.join(SCRIPT_DIR, 'output')
+
 
 def _resolve_path_from_base(path_value, base_dir):
     if path_value is None:
