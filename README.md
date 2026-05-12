@@ -11,6 +11,7 @@ Official code and benchmark resources for HierHGT-DTI, a hierarchical heterogene
 - `model/`: main training and ablation scripts used in the manuscript
 - `data/`: processed DrugBank and BioSnap benchmark splits plus cache builders
 - `baselines/`: retained baseline adaptation code for the manuscript baselines (`MolTrans`, `TransformerCPI`, `DrugBAN`, `DO-GMA`, `GeNNius`)
+- `results/`: lightweight result summaries corresponding to the manuscript benchmark tables
 - `assets/`: manuscript-facing figures
 
 ## Package metadata
@@ -23,6 +24,7 @@ the current validation output is stored in `data/split_integrity_report.md`.
 
 - generated drug and protein caches under `data/drug_cache/` and `data/esm_cache*/`
 - training outputs under `model/output*`
+- full per-run model checkpoints and logs; retained result summaries are under `results/`
 - unused baseline candidates and supplementary helper files not required for the paper
 
 ## Quick start
@@ -77,4 +79,6 @@ python check_split_integrity.py --root .
 - `data/cache_esm_features.py`: ESM-based protein cache builder
 - `data/check_split_integrity.py`: split completeness and cold-start leakage checker
 - `data/split_integrity_report.md`: validation report for the released split files
+- `results/main_benchmark_summary.csv`: main benchmark result summary
+- `results/main_benchmark_summary.md`: Markdown view of the main benchmark result summary
 - `baselines/run_selected_baselines.sh`: baseline runner for the retained comparison models
