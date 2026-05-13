@@ -79,7 +79,7 @@ python check_split_integrity.py --root .
 - `model/train_hierhgt_dti.py`: main training entry
 - `model/run_hierhgt_dti_ablation.py`: manuscript ablation runner
 - `data/cache_drug_graphs.py`: RDKit-based drug cache builder
-- `data/cache_esm_features.py`: ESM residue/contact-map cache builder with Louvain pocket-node assignment
+- `data/cache_esm_features.py`: ESM residue/contact/similarity-derived cache builder with Louvain pocket-node assignment
 - `data/check_split_integrity.py`: split completeness and cold-start leakage checker
 - `data/split_integrity_report.md`: validation report for the released split files
 - `results/main_benchmark_summary.csv`: main benchmark result summary
