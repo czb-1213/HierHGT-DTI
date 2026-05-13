@@ -17,6 +17,9 @@ Official code and benchmark resources for HierHGT-DTI, a hierarchical heterogene
 ## Package metadata
 
 This manuscript snapshot includes a top-level MIT `LICENSE` and `CITATION.cff`.
+The released `full.csv` files are the already sampled positive/negative candidate pools;
+`data/generate_data_splits.py` validates, pair-deduplicates and partitions those pools
+instead of regenerating negatives.
 The processed split release can be checked with `data/check_split_integrity.py`;
 the current validation output is stored in `data/split_integrity_report.md`.
 

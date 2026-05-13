@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Check fixed split files for class balance and cold-start entity leakage.
+"""Check fixed split files for label counts and cold-start entity leakage.
 
 The script is intentionally conservative: it reports missing files instead of
 failing silently, and it only computes overlap checks for complete

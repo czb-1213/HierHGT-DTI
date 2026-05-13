@@ -246,7 +246,7 @@ def split_cold(df: pd.DataFrame, dataset_name: str, mode: str, seed: int = None)
 
     - train/val/test entities are fully disjoint on key.
     - Pair ratio depends on entity degree distribution (not controlled).
-    - Label distribution tends to be balanced due to many entities per split.
+    - Label counts are reported after splitting and are not forced to exact 1:1.
     """
     if seed is None:
         seed = RANDOM_SEED
@@ -305,7 +305,7 @@ def split_cold_hybrid(df: pd.DataFrame, dataset_name: str, mode: str, seed: int 
 
     - Test entities are selected by entity-count (20% of entities), cold w.r.t. train/val.
     - Train/val are pair-level stratified split on the remaining data (shared entities OK).
-    - Label distribution is balanced across all splits.
+    - Train/val are label-stratified; final split files are not forced to exact 1:1.
     - Val signal is clean for early stopping (no cold noise).
     """
     if seed is None:
