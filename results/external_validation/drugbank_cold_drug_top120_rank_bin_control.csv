@@ -1,0 +1,5 @@
+rank_bin,scanned_predictions,exact_identity_mappings,gaba_family_mapped,non_gaba_mapped,unresolved_or_failed,non_gaba_among_exact_percent
+1-30,30,28,28,0,2,0.0
+31-60,30,28,26,2,2,7.1
+61-90,30,19,8,11,11,57.9
+91-120,30,17,0,17,13,100.0
