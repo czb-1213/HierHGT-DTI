@@ -12,6 +12,7 @@ Official code and benchmark resources for HierHGT-DTI, a hierarchical heterogene
 - `data/`: processed DrugBank and BioSnap benchmark splits plus cache builders
 - `baselines/`: retained baseline adaptation code for the manuscript baselines (`MolTrans`, `TransformerCPI`, `DrugBAN`, `DO-GMA`, `GeNNius`)
 - `results/`: lightweight result summaries corresponding to the manuscript benchmark tables and supplementary external-validation audits
+- `tools/`: lightweight audit scripts for reviewer-facing validation checks
 - `assets/`: manuscript-facing figures
 
 ## Package metadata
@@ -22,6 +23,7 @@ The released `full.csv` files are the already sampled positive/negative candidat
 instead of regenerating negatives.
 The processed split release can be checked with `data/check_split_integrity.py`;
 the current validation output is stored in `data/split_integrity_report.md`.
+For cold-protein evaluation, `data/protein_similarity_report.md` documents exact test-protein isolation and nearest-neighbor 5-mer Jaccard similarity to the train/validation protein pool.
 
 ## Excluded from this repository snapshot
 
@@ -73,6 +75,12 @@ cd data
 python check_split_integrity.py --root .
 ```
 
+Regenerate the cold-protein sequence-similarity audit:
+
+```bash
+python tools/protein_similarity_audit.py --root data --output data/protein_similarity_report.md
+```
+
 ## Repository layout
 
 - `model/config_hierhgt_dti.yaml`: default experiment config
@@ -82,6 +90,8 @@ python check_split_integrity.py --root .
 - `data/cache_esm_features.py`: ESM residue/contact/similarity-derived cache builder with Louvain pocket-node assignment
 - `data/check_split_integrity.py`: split completeness and cold-start leakage checker
 - `data/split_integrity_report.md`: validation report for the released split files
+- `data/protein_similarity_report.md`: cold-protein sequence-similarity audit for the released split files
+- `tools/protein_similarity_audit.py`: script used to regenerate the cold-protein similarity audit
 - `results/main_benchmark_summary.csv`: main benchmark result summary
 - `results/main_benchmark_summary.md`: Markdown view of the main benchmark result summary
 - `results/external_validation/`: lightweight selection-flow and background-control summaries for the external audit in Supplementary Section S6

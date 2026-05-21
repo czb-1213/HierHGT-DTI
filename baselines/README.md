@@ -15,6 +15,11 @@ This directory keeps only the baseline implementations that are used in the manu
 - fixed `train/val/test` CSV splits under `data/<Dataset>/<Split>/`
 - manuscript datasets: `BioSnap` and `DrugBank`
 - manuscript splits: `random`, `cold_drug`, `cold_protein`
+- fixed candidate negatives shared across methods
+- validation-only checkpoint selection
+- shared metric-reporting pipeline
+
+The main manuscript tables report AUROC and AUPR as mean +/- population standard deviation over seeds 42, 256 and 3407. The corresponding reviewer-facing summary files are `results/main_benchmark_summary.csv` and `results/main_benchmark_summary.md`.
 
 ## Run all retained baselines
 
